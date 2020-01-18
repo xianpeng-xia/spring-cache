@@ -1,1 +1,31 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_cache?useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+logger:
+  level:
+    root: warn
+    com.mp.dao: trace
+  pattern:
+    console: '%p%m%n'
+
+mybatis-plus:
+  mapper-locations:
+    - xml/*.xml
+  global-config:
+    db-config:
+      #主键全局策略
+      id-type: auto
+      #field-strategy: ignored
+      #表名前缀
+      #table-prefix: mp_
+  #MyBaits 别名包扫描路径，通过该属性可以给包中的类注册别名，注册后在 Mapper 对应的 XML 文件中可以直接使用类名，而不用使用全限定的类名(即 XML 中调用的时候不用包含包名)
+  type-aliases-package: com.example.springCache.entity
+  #是否开启自动驼峰命名规则（camel case）映射，即从经典数据库列名 A_COLUMN（下划线命名） 到经典 Java 属性名 aColumn（驼峰命名） 的类似映射。
+  configuration:
+    map-underscore-to-camel-case: true
+
 
