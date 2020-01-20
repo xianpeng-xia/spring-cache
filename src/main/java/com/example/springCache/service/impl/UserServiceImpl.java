@@ -45,14 +45,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
-    @CacheEvict(cacheNames = {"user"}, key = "#user.id")
+    @CacheEvict(cacheNames = {"userCache"}, key = "#user.id")
     public void updateUser(User user) {
         System.out.println("清除缓存");
         userMapper.updateById(user);
     }
 
     @Override
-    @CacheEvict(value = "user", allEntries = true)//方法调用后清空所有缓存
+    @CacheEvict(value = "userCache", allEntries = true)//方法调用后清空所有缓存
     public void deleteAll1() {
 
     }
