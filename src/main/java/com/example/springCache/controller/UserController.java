@@ -4,6 +4,7 @@ import com.example.springCache.entity.User;
 import com.example.springCache.service.UserService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,12 +42,16 @@ public class UserController {
     }
 
     @GetMapping("/deleteAll1")
+    @CacheEvict(value = "user", allEntries = true)
     public void delete1() {
-        userService.deleteAll1();
+        System.out.println("deleteAll1");
+        // userService.deleteAll1();
     }
 
     @GetMapping("/deleteAll2")
+    @CacheEvict(value = "user", beforeInvocation = true)// 方法调用前清空所有缓存
     public void delete2() {
-        userService.deleteAll2();
+        System.out.println("deleteAll2");
+        // userService.deleteAll2();
     }
 }

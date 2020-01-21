@@ -24,7 +24,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     UserMapper userMapper;
 
     @Override
-    @Cacheable("userList")
+    @Cacheable(cacheNames = {"userList"})
     public List<User> getAll() {
         System.out.println("缓存不存在，执行方法");
         return userMapper.selectList(null);
@@ -45,20 +45,20 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
-    @CacheEvict(cacheNames = {"userCache"}, key = "#user.id")
+    @CacheEvict(cacheNames = {"user"}, key = "#user.id")
     public void updateUser(User user) {
         System.out.println("清除缓存");
         userMapper.updateById(user);
     }
 
     @Override
-    @CacheEvict(value = "userCache", allEntries = true)//方法调用后清空所有缓存
+    //@CacheEvict(value = "user", allEntries = true)//方法调用后清空所有缓存
     public void deleteAll1() {
 
     }
 
     @Override
-    @CacheEvict(value = "user", beforeInvocation = true)// 方法调用前清空所有缓存
+    //@CacheEvict(value = "user", beforeInvocation = true)// 方法调用前清空所有缓存
     public void deleteAll2() {
 
     }

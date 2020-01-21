@@ -1,13 +1,14 @@
 create database spring_cache CHARACTER SET utf8 COLLATE utf8_general_ci;
+
 use spring_cache;
 
 CREATE TABLE user (
-    id BIGINT(20) PRIMARY KEY NOT NULL COMMENT '主键',
+    id BIGINT(20) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT '主键',
     name VARCHAR(30) DEFAULT NULL COMMENT '姓名',
     age INT(11) DEFAULT NULL COMMENT '年龄',
     email VARCHAR(50) DEFAULT NULL COMMENT '邮箱',
     manager_id BIGINT(20) DEFAULT NULL COMMENT '直属上级id',
-    create_time DATETIME DEFAULT NULL COMMENT '创建时间',
+    create_time DATETIME DEFAULT NULL COMMENT '创建时间'
 )  ENGINE=INNODB CHARSET=UTF8;
 
 --  初始化数据：
