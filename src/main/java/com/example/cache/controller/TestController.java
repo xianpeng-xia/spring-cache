@@ -1,7 +1,7 @@
-package com.example.springCache.controller;
+package com.example.cache.controller;
 
-import com.example.springCache.entity.User;
-import com.example.springCache.service.UserService;
+import com.example.cache.entity.User;
+import com.example.cache.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

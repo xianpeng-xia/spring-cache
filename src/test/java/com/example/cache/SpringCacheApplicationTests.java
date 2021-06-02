@@ -1,7 +1,7 @@
-package com.example.springCache;
+package com.example.cache;
 
-import com.example.springCache.entity.User;
-import com.example.springCache.mapper.UserMapper;
+import com.example.cache.entity.User;
+import com.example.cache.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

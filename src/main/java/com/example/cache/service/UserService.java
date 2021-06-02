@@ -1,8 +1,8 @@
-package com.example.springCache.service;
+package com.example.cache.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.springCache.entity.User;
+import com.example.cache.entity.User;
 import java.util.List;
 
 /**

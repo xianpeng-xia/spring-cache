@@ -1,4 +1,4 @@
-package com.example.springCache.config;
+package com.example.cache.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.springframework.context.annotation.Bean;

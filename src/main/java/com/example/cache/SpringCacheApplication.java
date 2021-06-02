@@ -1,4 +1,4 @@
-package com.example.springCache;
+package com.example.cache;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

@@ -1,11 +1,10 @@
-package com.example.springCache.service.impl;
+package com.example.cache.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.springCache.entity.User;
-import com.example.springCache.mapper.UserMapper;
-import com.example.springCache.service.UserService;
-import java.sql.Wrapper;
+import com.example.cache.entity.User;
+import com.example.cache.mapper.UserMapper;
+import com.example.cache.service.UserService;
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;

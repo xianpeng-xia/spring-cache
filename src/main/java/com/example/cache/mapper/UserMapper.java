@@ -1,7 +1,7 @@
-package com.example.springCache.mapper;
+package com.example.cache.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.springCache.entity.User;
+import com.example.cache.entity.User;
 
 /**
  * Created by xianpeng.xia
